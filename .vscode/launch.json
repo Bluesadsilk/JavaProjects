@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "proyecto_propio",
+            "request": "launch",
+            "mainClass": "Proyecto_propio.proyecto_propio",
+            "projectName": "JavaProjects_a9622de6"
+        },
+        {
+            "type": "java",
             "name": "proyecto_prueba",
             "request": "launch",
             "mainClass": "Proyecto_Prueba.proyecto_prueba",
