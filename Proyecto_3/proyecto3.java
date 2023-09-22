@@ -1,14 +1,27 @@
 package Proyecto_3;
 
+import java.util.Scanner;
+
+/**
+ * proyecto3
+ */
 public class proyecto3 {
 
     public static void main(String[] args) {
-        int a = 5;
-        int b = 3;
-        boolean dada;
-        dada = a++ / 2 < b && (a++ / 2 > b) || (a * 2 < b * 4);
-        System.out.println(dada);
-        System.out.println("3+5= " + (3 + 5));
-    }
 
+        System.out.println("Introduce tu nombre completo");
+
+        Scanner tecladoNombre = new Scanner(System.in);
+        String nombreCompleto = tecladoNombre.nextLine();
+
+        System.out.println("Introduce tu fecha de nacimiento");
+
+        Scanner tecladoFecha = new Scanner(System.in);
+        String fechaNacimiento = tecladoFecha.nextLine();
+        tecladoFecha.close();
+        tecladoNombre.close();
+
+        System.out.println("Bienvenido " + nombreCompleto + " nacido en " + fechaNacimiento);
+
+    }
 }
