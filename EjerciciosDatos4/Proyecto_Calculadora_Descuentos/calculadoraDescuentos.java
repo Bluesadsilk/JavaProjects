@@ -1,4 +1,4 @@
-package Proyecto_Calculadora_Descuentos;
+package EjerciciosDatos4.Proyecto_Calculadora_Descuentos;
 
 public class calculadoraDescuentos {
 

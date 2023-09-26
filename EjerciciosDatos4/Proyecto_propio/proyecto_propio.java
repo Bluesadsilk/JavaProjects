@@ -1,4 +1,4 @@
-package Proyecto_propio;
+package EjerciciosDatos4.Proyecto_propio;
 
 public class proyecto_propio {
 

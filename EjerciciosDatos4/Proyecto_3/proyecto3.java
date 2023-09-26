@@ -1,4 +1,4 @@
-package Proyecto_3;
+package EjerciciosDatos4.Proyecto_3;
 
 import java.util.Scanner;
 

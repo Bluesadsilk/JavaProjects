@@ -1,4 +1,4 @@
-package Proyecto_Calculadora_Media;
+package EjerciciosDatos4.Proyecto_Calculadora_Media;
 
 public class calculadora_media {
 

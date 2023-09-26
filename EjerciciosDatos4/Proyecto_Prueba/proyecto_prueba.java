@@ -1,4 +1,4 @@
-package Proyecto_Prueba;
+package EjerciciosDatos4.Proyecto_Prueba;
 
 import java.util.Scanner;
 

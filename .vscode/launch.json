@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "cilindros",
+            "request": "launch",
+            "mainClass": "EjerciciosDatos4.Proyecto_Cilindros.cilindros",
+            "projectName": "JavaProjects_a9622de6"
+        },
+        {
+            "type": "java",
+            "name": "Rectangulos",
+            "request": "launch",
+            "mainClass": "EjerciciosDatos4.Proyecto_Rectangulos.Rectangulos",
+            "projectName": "JavaProjects_a9622de6"
+        },
+        {
+            "type": "java",
+            "name": "ejPlazoFijo",
+            "request": "launch",
+            "mainClass": "EjerciciosDatos4.Plazo_Fijo.ejPlazoFijo",
+            "projectName": "JavaProjects_a9622de6"
+        },
+        {
+            "type": "java",
             "name": "calculadoraDescuentos",
             "request": "launch",
             "mainClass": "Proyecto_Calculadora_Descuentos.calculadoraDescuentos",
