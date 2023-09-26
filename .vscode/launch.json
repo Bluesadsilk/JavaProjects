@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "calculadoraDescuentos",
+            "request": "launch",
+            "mainClass": "Proyecto_Calculadora_Descuentos.calculadoraDescuentos",
+            "projectName": "JavaProjects_a9622de6"
+        },
+        {
+            "type": "java",
+            "name": "calculadora_media",
+            "request": "launch",
+            "mainClass": "Proyecto_Calculadora_Media.calculadora_media",
+            "projectName": "JavaProjects_a9622de6"
+        },
+        {
+            "type": "java",
             "name": "proyecto3",
             "request": "launch",
             "mainClass": "Proyecto_3.proyecto3",
