@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "calculadoraSegundos",
+            "request": "launch",
+            "mainClass": "EjerciciosDatos4.Calculadora_Segundos.calculadoraSegundos",
+            "projectName": "JavaProjects_a9622de6"
+        },
+        {
+            "type": "java",
             "name": "cilindros",
             "request": "launch",
             "mainClass": "EjerciciosDatos4.Proyecto_Cilindros.cilindros",
