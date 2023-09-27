@@ -6,12 +6,24 @@ public class calculadoraSegundos {
 
     public static void main(String[] args) {
 
-        Scanner teclado = new Scanner(System.in);
+        Scanner tsegundos = new Scanner(System.in);
+        long dias, horas, minutos, segundos, srestantes;
+
         System.out.println("Introduzca un numero indeterminado de segundos");
-        long totalSegundos = teclado.nextLong();
-        teclado.close();
-        long conversor = 1;
-        System.out.println("El total en dias, horas y minutos es");
+        segundos = tsegundos.nextLong();
+
+        dias = segundos / 86400;
+        srestantes = segundos % 86400;
+
+        horas = srestantes / 3600;
+        srestantes = srestantes % 3600;
+
+        minutos = srestantes / 60;
+        srestantes = srestantes % 60;
+
+        System.out.println("En total son " + dias + "dias, " + horas + "horas, " + minutos + "minutos y " + srestantes
+                + "segundos.");
+        tsegundos.close();
 
     }
 
