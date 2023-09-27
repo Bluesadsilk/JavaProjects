@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "coche",
+            "request": "launch",
+            "mainClass": "EjerciciosDatos4.Ejercicio_Coche.coche",
+            "projectName": "JavaProjects_a9622de6"
+        },
+        {
+            "type": "java",
+            "name": "triangulo",
+            "request": "launch",
+            "mainClass": "EjerciciosDatos4.Triangulo.triangulo",
+            "projectName": "JavaProjects_a9622de6"
+        },
+        {
+            "type": "java",
             "name": "calculadoraSegundos",
             "request": "launch",
             "mainClass": "EjerciciosDatos4.Calculadora_Segundos.calculadoraSegundos",
