@@ -33,8 +33,8 @@ public class coche {
 
         double cuentaKm = cuentaKm2 - cuentaKm1;
         double consumoTotal = (prcRep1 / prcLtr1) + (prcRep2 / prcLtr2);
-        double consumo100 = (cuentaKm / consumoTotal) * 100;
-        double costeKm = consumo100 / 100 * ((prcLtr1 + prcLtr2) / 2);
+        double consumo100 = (consumoTotal / cuentaKm) * 100;
+        double costeKm = (prcRep1 + prcRep2) / cuentaKm;
 
         teclado.close();
 
