@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ej1",
+            "request": "launch",
+            "mainClass": "EstructurasControl.ejercicio1.ej1",
+            "projectName": "JavaProjects_a9622de6"
+        },
+        {
+            "type": "java",
             "name": "ejercicioIf",
             "request": "launch",
             "mainClass": "EstructurasControl.ProyectoIf.ejercicioIf",
