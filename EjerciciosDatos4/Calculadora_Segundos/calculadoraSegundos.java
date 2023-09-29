@@ -21,8 +21,9 @@ public class calculadoraSegundos {
         minutos = srestantes / 60;
         srestantes = srestantes % 60;
 
-        System.out.println("En total son " + dias + "dias, " + horas + "horas, " + minutos + "minutos y " + srestantes
-                + "segundos.");
+        System.out
+                .println("En total son " + dias + " dias, " + horas + " horas, " + minutos + " minutos y " + srestantes
+                        + " segundos.");
         tsegundos.close();
 
     }
