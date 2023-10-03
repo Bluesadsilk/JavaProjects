@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "notasAL",
+            "request": "launch",
+            "mainClass": "EstructurasControl.Ejercicio6.notasAL",
+            "projectName": "JavaProjects_a9622de6"
+        },
+        {
+            "type": "java",
+            "name": "horasExtra",
+            "request": "launch",
+            "mainClass": "EstructurasControl.Ejercicio5.horasExtra",
+            "projectName": "JavaProjects_a9622de6"
+        },
+        {
+            "type": "java",
+            "name": "pasos",
+            "request": "launch",
+            "mainClass": "EstructurasControl.Ejercicio4.pasos",
+            "projectName": "JavaProjects_a9622de6"
+        },
+        {
+            "type": "java",
             "name": "estadonum",
             "request": "launch",
             "mainClass": "EstructurasControl.ejercicio2.estadonum",
