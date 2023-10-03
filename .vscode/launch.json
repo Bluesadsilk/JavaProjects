@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "fechaEstacion",
+            "request": "launch",
+            "mainClass": "EstructurasControl2.Ejercicio1.fechaEstacion",
+            "projectName": "JavaProjects_a9622de6"
+        },
+        {
+            "type": "java",
             "name": "notasAL",
             "request": "launch",
             "mainClass": "EstructurasControl.Ejercicio6.notasAL",
