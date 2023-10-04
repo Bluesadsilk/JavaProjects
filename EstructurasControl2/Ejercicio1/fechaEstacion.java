@@ -16,168 +16,125 @@ public class fechaEstacion {
         int mes = teclado.nextShort();
         teclado.close();
 
-        int diasMes;
+        boolean diasMes;
 
+        diasMes = ((mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12)
+                && (dia <= 31 && dia >= 1))
+                || ((mes == 2 && dia <= 28 && dia >= 1)
+                        || ((mes == 4 || mes == 6 || mes == 9 || mes == 11) && dia >= 1 && dia <= 30));
         /* Usamos un switch para que calcule los dias del mes */
+        if (diasMes == false) {
 
-        switch (mes) {
-            case 1:
+            System.out.println("Entrada incorrecta");
 
-                break;
-
-            case 2:
-
-                break;
-
-            case 3:
-
-                break;
-
-            case 4:
-
-                break;
-
-            case 5:
-
-                break;
-
-            case 6:
-
-                break;
-
-            case 7:
-
-                break;
-
-            case 8:
-
-                break;
-
-            case 9:
-
-                break;
-
-            case 10:
-
-                break;
-
-            case 11:
-
-                break;
-
-            case 12:
-
-                break;
-
-            default:
-
-                System.out.println("Error");
-
-                break;
         }
 
-        switch (mes) {
-            case 1:
+        else {
 
-                System.out.println("Es Invierno");
-
-                break;
-
-            case 2:
-
-                System.out.println("Es Invierno");
-
-                break;
-
-            case 3:
-
-                if (dia < 20) {
-                    System.out.println("Es Invierno");
-                } else {
-                    System.out.println("Es Primavera");
-                }
-
-                break;
-
-            case 4:
-
-                System.out.println("Es Primavera");
-
-                break;
-
-            case 5:
-
-                System.out.println("Es Primavera");
-                break;
-
-            case 6:
-
-                if (dia < 21) {
-
-                    System.out.println("Es Primavera");
-
-                } else {
-
-                    System.out.println("Es Verano");
-
-                }
-
-                break;
-
-            case 7:
-
-                System.out.println("Es Verano");
-
-                break;
-
-            case 8:
-
-                System.out.println("Es Verano");
-
-                break;
-
-            case 9:
-
-                if (dia < 23) {
-
-                    System.out.println("Es Verano");
-
-                } else {
-
-                    System.out.println("Es Otoño");
-
-                }
-
-                break;
-
-            case 10:
-
-                System.out.println("Es Otoño");
-
-                break;
-
-            case 11:
-                System.out.println("Es Otoño");
-                break;
-
-            case 12:
-
-                if (dia < 21) {
-
-                    System.out.println("Es Otoño");
-                } else {
+            switch (mes) {
+                case 1:
 
                     System.out.println("Es Invierno");
 
-                }
+                    break;
 
-                break;
+                case 2:
 
-            default:
+                    System.out.println("Es Invierno");
 
-                System.out.println("Error");
+                    break;
 
-                break;
+                case 3:
+
+                    if (dia < 20) {
+                        System.out.println("Es Invierno");
+                    } else {
+                        System.out.println("Es Primavera");
+                    }
+
+                    break;
+
+                case 4:
+
+                    System.out.println("Es Primavera");
+
+                    break;
+
+                case 5:
+
+                    System.out.println("Es Primavera");
+                    break;
+
+                case 6:
+
+                    if (dia < 21) {
+
+                        System.out.println("Es Primavera");
+
+                    } else {
+
+                        System.out.println("Es Verano");
+
+                    }
+
+                    break;
+
+                case 7:
+
+                    System.out.println("Es Verano");
+
+                    break;
+
+                case 8:
+
+                    System.out.println("Es Verano");
+
+                    break;
+
+                case 9:
+
+                    if (dia < 23) {
+
+                        System.out.println("Es Verano");
+
+                    } else {
+
+                        System.out.println("Es Otoño");
+
+                    }
+
+                    break;
+
+                case 10:
+
+                    System.out.println("Es Otoño");
+
+                    break;
+
+                case 11:
+                    System.out.println("Es Otoño");
+                    break;
+
+                case 12:
+
+                    if (dia < 21) {
+
+                        System.out.println("Es Otoño");
+                    } else {
+
+                        System.out.println("Es Invierno");
+
+                    }
+
+                    break;
+
+                default:
+
+                    System.out.println("Error");
+
+                    break;
+            }
+
         }
 
     }
