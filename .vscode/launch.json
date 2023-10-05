@@ -9,6 +9,20 @@
             "name": "fechaEstacion",
             "request": "launch",
             "mainClass": "EstructurasControl2.Ejercicio1.fechaEstacion",
+            "projectName": "JavaProjects_b39a5907"
+        },
+        {
+            "type": "java",
+            "name": "secnum",
+            "request": "launch",
+            "mainClass": "EstructurasControl2.EJercicio2.secnum",
+            "projectName": "JavaProjects_b39a5907"
+        },
+        {
+            "type": "java",
+            "name": "fechaEstacion",
+            "request": "launch",
+            "mainClass": "EstructurasControl2.Ejercicio1.fechaEstacion",
             "projectName": "JavaProjects_a9622de6"
         },
         {

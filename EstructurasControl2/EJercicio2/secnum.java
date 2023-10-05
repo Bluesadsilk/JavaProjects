@@ -20,25 +20,31 @@ public class secnum {
 
         int n3 = teclado.nextInt();
 
-        teclado.close();
-
         System.out.println("Para máximo introduzca 1 , para minimo introduzca 2");
         int election = teclado.nextInt();
 
-        int maximo;
-        int minimo;
+        teclado.close();
+
+        int maximo1;
+        int maximo2;
+        int minimo1;
+        int minimo2;
 
         switch (election) {
             case 1:
 
-                maximo = Math.max(n1, n2) Math.max(n2, m3)
-                System.out.println("El máximo es = " + maximo);
+                maximo1 = Math.max(n1, n2);
+                maximo2 = Math.max(maximo1, n3);
+                System.out.println("El máximo es = " + maximo2);
 
                 break;
 
             case 2:
 
-                System.out.println("El mínimo es = " + minimo);
+                minimo1 = Math.min(n1, n2);
+                minimo2 = Math.min(minimo1, n3);
+
+                System.out.println("El mínimo es = " + minimo2);
 
                 break;
 
