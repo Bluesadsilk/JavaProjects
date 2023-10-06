@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "numcomp",
+            "request": "launch",
+            "mainClass": "EstructurasControl3.Ejercicio3.numcomp",
+            "projectName": "JavaProjects_b39a5907"
+        },
+        {
+            "type": "java",
+            "name": "parComp",
+            "request": "launch",
+            "mainClass": "EstructurasControl3.Ejercicio2.parComp",
+            "projectName": "JavaProjects_b39a5907"
+        },
+        {
+            "type": "java",
             "name": "compren",
             "request": "launch",
             "mainClass": "EstructurasControl3.Ejercicio1.compren",
