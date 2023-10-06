@@ -11,34 +11,6 @@ public class sueldoNomina {
         int nomina = teclado.nextInt();
         teclado.close();
 
-        int porcentaje;
-
-        if (nomina <= 1 && nomina <= 6000) {
-
-            int porcentaje = 20;
-
-        }
-
-        if (nomina <= 6000 && nomina <= 7900) {
-
-            int porcentaje = 10;
-
-        }
-
-        if (nomina <= 7900 && nomina <= ) {
-
-            int porcentaje = 5;
-
-        }
-
-        if (nomina <= 12000 && nomina <= 6000) {
-
-            int porcentaje = 0;
-
-        }
-
-        System.out
-                .println("Tu sueldo ha sido incrementado en un " + porcentaje + "%, tu nómina actual es de: " + nomina);
     }
 
 }
