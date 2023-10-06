@@ -11,6 +11,8 @@ public class sueldoNomina {
         int nomina = teclado.nextInt();
         teclado.close();
 
+        System.out.println(nomina);
+
     }
 
 }

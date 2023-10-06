@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "contador",
+            "request": "launch",
+            "mainClass": "EstructurasControl3.EJercicioBucleContar.contador",
+            "projectName": "JavaProjects_a9622de6"
+        },
+        {
+            "type": "java",
+            "name": "adivina",
+            "request": "launch",
+            "mainClass": "EstructurasControl3.EjercicicoBucle.adivina",
+            "projectName": "JavaProjects_a9622de6"
+        },
+        {
+            "type": "java",
             "name": "fechaEstacion",
             "request": "launch",
             "mainClass": "EstructurasControl2.Ejercicio1.fechaEstacion",
