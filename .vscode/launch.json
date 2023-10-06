@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "compren",
+            "request": "launch",
+            "mainClass": "EstructurasControl3.Ejercicio1.compren",
+            "projectName": "JavaProjects_a9622de6"
+        },
+        {
+            "type": "java",
             "name": "contador",
             "request": "launch",
             "mainClass": "EstructurasControl3.EJercicioBucleContar.contador",
