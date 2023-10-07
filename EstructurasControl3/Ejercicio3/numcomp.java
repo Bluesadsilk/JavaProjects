@@ -10,7 +10,7 @@ public class numcomp {
 
         int n1 = 1;
         int n2;
-        int contador = ;
+        int contador = 0;
 
         System.out.println(
                 "Introduce un número para calcular la suma entre los números que existen del rango de 1 hasta el introducido");

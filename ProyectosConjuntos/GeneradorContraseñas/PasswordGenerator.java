@@ -6,7 +6,7 @@ import java.util.Scanner;
 *  longitud de la contraseña, frequencia de caracteres, según el tipo de carácter que se desee. Queremos usar 
 */
 
-public class passwordGenerator {
+public class PasswordGenerator {
 
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
