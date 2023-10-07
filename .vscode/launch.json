@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "negativo",
+            "request": "launch",
+            "mainClass": "EstructurasControl3.EJercicio4.negativo",
+            "projectName": "JavaProjects_b39a5907"
+        },
+        {
+            "type": "java",
             "name": "PasswordGenerator",
             "request": "launch",
             "mainClass": "ProyectosConjuntos.GeneradorContraseñas.PasswordGenerator",
