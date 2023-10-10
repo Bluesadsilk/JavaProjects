@@ -6,6 +6,41 @@
     "configurations": [
         {
             "type": "java",
+            "name": "volverLeer",
+            "request": "launch",
+            "mainClass": "EstructurasControl3.Ejercicio8.volverLeer",
+            "projectName": "JavaProjects_a9622de6"
+        },
+        {
+            "type": "java",
+            "name": "mayor1000",
+            "request": "launch",
+            "mainClass": "EstructurasControl3.Ejercicio7.mayor1000",
+            "projectName": "JavaProjects_a9622de6"
+        },
+        {
+            "type": "java",
+            "name": "factorial",
+            "request": "launch",
+            "mainClass": "EstructurasControl3.Ejercicio6.factorial",
+            "projectName": "JavaProjects_a9622de6"
+        },
+        {
+            "type": "java",
+            "name": "negativo",
+            "request": "launch",
+            "mainClass": "EstructurasControl3.EJercicio4.negativo",
+            "projectName": "JavaProjects_a9622de6"
+        },
+        {
+            "type": "java",
+            "name": "PasswordGenerator",
+            "request": "launch",
+            "mainClass": "ProyectosConjuntos.GeneradorContraseñas.PasswordGenerator",
+            "projectName": "JavaProjects_a9622de6"
+        },
+        {
+            "type": "java",
             "name": "totales",
             "request": "launch",
             "mainClass": "EstructurasControl3.Ejercicio5.totales",
