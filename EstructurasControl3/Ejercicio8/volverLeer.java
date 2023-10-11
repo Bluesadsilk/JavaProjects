@@ -10,20 +10,18 @@ public class volverLeer {
 
         System.out.println("Introduzca un número");
         int nIntroducido = teclado.nextInt();
-        int digitos = 0;
-        int numerador = 1000;
+        int digitos = 1;
 
         while (true) {
 
             if (nIntroducido > 0) {
-
-                while (numerador >= 10) {
-                    numerador = numerador / 10;
+                while (nIntroducido >= 10) {
+                    nIntroducido = nIntroducido / 10;
                     digitos++;
 
                 }
 
-                System.out.println("El número " + nIntroducido + " contiene " + digitos + " decimales");
+                System.out.println("El número contiene " + digitos + " decimales");
 
                 break;
 
