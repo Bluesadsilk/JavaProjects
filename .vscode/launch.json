@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "productoSuma",
+            "request": "launch",
+            "mainClass": "EstructurasControl3.Ejercicio10.productoSuma",
+            "projectName": "JavaProjects_a9622de6"
+        },
+        {
+            "type": "java",
+            "name": "parComp",
+            "request": "launch",
+            "mainClass": "EstructurasControl3.Ejercicio2.parComp",
+            "projectName": "JavaProjects_a9622de6"
+        },
+        {
+            "type": "java",
+            "name": "potencia",
+            "request": "launch",
+            "mainClass": "EstructurasControl3.EJercicio9.potencia",
+            "projectName": "JavaProjects_a9622de6"
+        },
+        {
+            "type": "java",
             "name": "volverLeer",
             "request": "launch",
             "mainClass": "EstructurasControl3.Ejercicio8.volverLeer",

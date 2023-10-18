@@ -9,11 +9,10 @@ public class volverLeer {
         Scanner teclado = new Scanner(System.in);
 
         System.out.println("Introduzca un número");
-        int nIntroducido = teclado.nextInt();
         int digitos = 1;
 
         while (true) {
-
+            int nIntroducido = teclado.nextInt();
             if (nIntroducido > 0) {
                 while (nIntroducido >= 10) {
                     nIntroducido = nIntroducido / 10;
