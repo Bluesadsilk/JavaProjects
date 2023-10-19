@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "conjunto",
+            "request": "launch",
+            "mainClass": "EstructurasRepetitivas.Ejercicio1.conjunto",
+            "projectName": "JavaProjects_a9622de6"
+        },
+        {
+            "type": "java",
             "name": "divisionFac",
             "request": "launch",
             "mainClass": "EstructurasControl3.Ejercicio11.divisionFac",
