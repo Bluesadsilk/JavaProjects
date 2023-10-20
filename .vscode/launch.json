@@ -9,6 +9,13 @@
             "name": "conjunto",
             "request": "launch",
             "mainClass": "EstructurasRepetitivas.Ejercicio1.conjunto",
+            "projectName": "JavaProjects_b39a5907"
+        },
+        {
+            "type": "java",
+            "name": "conjunto",
+            "request": "launch",
+            "mainClass": "EstructurasRepetitivas.Ejercicio1.conjunto",
             "projectName": "JavaProjects_a9622de6"
         },
         {

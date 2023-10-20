@@ -1,43 +1,35 @@
 package EstructurasRepetitivas.Ejercicio1;
 
-import java.util.Scanner;
+import java.util.Random;
 
 public class conjunto {
 
     public static void main(String[] args) {
-        Scanner teclado = new Scanner(System.in);
-        teclado.close();
+        Random random = new Random();
 
         int alumnos = 100;
-        int numeroAlumno = 1;
-        int asignatura1 = 1, asignatura2 = 1, asignatura3 = 1, asignatura4 = 1, asignatura5 = 1, asignatura6 = 1,
-                asignatura7 = 1;
+        int numeroAlumno = 0;
+        double asignatura1 = 0, asignatura2 = 0, asignatura3 = 0, asignatura4 = 0, asignatura5 = 0, asignatura6 = 0,
+                asignatura7 = 0;
 
-        while (numeroAlumno > alumnos) {
+        while (numeroAlumno < alumnos) {
+            double NotaAsignatura1 = Math.round(random.nextDouble()) * 10;
+            asignatura1 = asignatura1 + NotaAsignatura1;
+
+            double NotaAsignatura2 = random.nextDouble() * 10;
+            asignatura2 = asignatura2 + NotaAsignatura2;
+
             numeroAlumno++;
-            asignatura1 = (int) (asignatura1 * Math.random()) + asignatura1;
 
         }
-        int NotaAsignatura1 = asignatura1;
-        int AprobadosAsignatura1 = NotaAsignatura1;
 
-        int NotaAsignatura2 = asignatura2;
-        int AprobadosAsignatura2 = NotaAsignatura2;
-
-        int NotaAsignatura3 = asignatura3;
-        int AprobadosAsignatura3 = NotaAsignatura3;
-
-        int NotaAsignatura4 = asignatura4;
-        int AprobadosAsignatura4 = NotaAsignatura4;
-
-        int NotaAsignatura5 = asignatura5;
-        int AprobadosAsignatura5 = NotaAsignatura5;
-
-        int NotaAsignatura6 = asignatura6;
-        int AprobadosAsignatura6 = NotaAsignatura6;
-
-        int NotaAsignatura7 = asignatura7;
-        int AprobadosAsignatura7 = NotaAsignatura7;
+        int AprobadosAsignatura1 = (int) asignatura1 / alumnos;
+        int AprobadosAsignatura2 = (int) asignatura2 / alumnos;
+        int AprobadosAsignatura3 = (int) asignatura3 / alumnos;
+        int AprobadosAsignatura4 = (int) asignatura4 / alumnos;
+        int AprobadosAsignatura5 = (int) asignatura5 / alumnos;
+        int AprobadosAsignatura6 = (int) asignatura6 / alumnos;
+        int AprobadosAsignatura7 = (int) asignatura7 / alumnos;
 
         System.out.println("El porcentaje de aprobados es  = " + AprobadosAsignatura1 + "%");
         System.out.println("El porcentaje de aprobados es  = " + AprobadosAsignatura2 + "%");
