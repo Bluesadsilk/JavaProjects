@@ -8,11 +8,10 @@ public class conjunto {
         Random random = new Random();
 
         int idMateria = 1;
-        int idAlumnos = 1;
 
         while (idMateria < 7) {
             int aprobado = 1;
-            idAlumnos = 1;
+            int idAlumnos = 1;
             while (idAlumnos < 100) {
 
                 int notaAlumno = random.nextInt(11);
