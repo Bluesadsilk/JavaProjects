@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "secuencia",
+            "request": "launch",
+            "mainClass": "EstructurasRepetitivas.Ejercicio4.secuencia",
+            "projectName": "JavaProjects_a9622de6"
+        },
+        {
+            "type": "java",
+            "name": "primos",
+            "request": "launch",
+            "mainClass": "EstructurasRepetitivas.Ejercicio2.primos",
+            "projectName": "JavaProjects_a9622de6"
+        },
+        {
+            "type": "java",
             "name": "nPositivo",
             "request": "launch",
             "mainClass": "EstructurasRepetitivas.Ejercicio3.nPositivo",
