@@ -9,6 +9,13 @@
             "name": "nPositivo",
             "request": "launch",
             "mainClass": "EstructurasRepetitivas.Ejercicio3.nPositivo",
+            "projectName": "JavaProjects_a9622de6"
+        },
+        {
+            "type": "java",
+            "name": "nPositivo",
+            "request": "launch",
+            "mainClass": "EstructurasRepetitivas.Ejercicio3.nPositivo",
             "projectName": "JavaProjects_b39a5907"
         },
         {

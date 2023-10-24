@@ -22,29 +22,33 @@ public class nPositivo {
 
             else {
 
+                teclado.close();
                 break;
             }
 
         }
 
-        int contador = 0;
+        int contador = 3;
 
-        while (contador < n - 3) {
+        while (n + 1 > contador) {
+
+            System.out.println(contador + " es multiplo de 3");
+
+            int divisor = 1;
+
+            while (divisor < contador + 3) {
+
+                if (contador % divisor == 0) {
+
+                    System.out.println(divisor + " es divisor de " + contador);
+
+                }
+
+                divisor++;
+            }
 
             contador = contador + 3;
-            System.out.println(contador + " 10es multiplo de 3");
-            String divisores = "";
-
-            while (true) {
-
-                break;
-            }
-
-            System.out.println("Los divisores de " + contador + " son " + divisores);
-
         }
-
-        teclado.close();
     }
 
 }
