@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "eliminar",
+            "request": "launch",
+            "mainClass": "EstructurasRepetitivas.Ejercicio6.eliminar",
+            "projectName": "JavaProjects_a9622de6"
+        },
+        {
+            "type": "java",
+            "name": "devolver",
+            "request": "launch",
+            "mainClass": "EstructurasRepetitivas.Ejercicio5.devolver",
+            "projectName": "JavaProjects_a9622de6"
+        },
+        {
+            "type": "java",
             "name": "secuencia",
             "request": "launch",
             "mainClass": "EstructurasRepetitivas.Ejercicio4.secuencia",
