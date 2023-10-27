@@ -18,9 +18,14 @@ public class eliminar {
 
         else {
 
-            int num2 = num;
+            num = num / 10;
+            int operador = 1;
+            while (num > 9) {
+                operador++;
 
-            System.out.println(num2);
+            }
+
+            System.out.println(resultado);
 
         }
 
