@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "menuMetodo",
+            "request": "launch",
+            "mainClass": "Metodos_Intro.MenuMetodo.menuMetodo",
+            "projectName": "JavaProjects_a9622de6"
+        },
+        {
+            "type": "java",
             "name": "eliminar",
             "request": "launch",
             "mainClass": "EstructurasRepetitivas.Ejercicio6.eliminar",
