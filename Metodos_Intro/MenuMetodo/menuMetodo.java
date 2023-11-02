@@ -32,6 +32,10 @@ public class menuMetodo {
                 break;
 
             case 2:
+                System.out.println("Introduzca número");
+                int num = teclado.nextInt();
+                System.out.println("El número de digitos de " + num + " es igual a " + menu.Digitos(num));
+
                 break;
 
             case 3:
