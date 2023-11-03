@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "edprueba",
+            "request": "launch",
+            "mainClass": "EntornoDeDesarrollo.edprueba",
+            "projectName": "JavaProjects_a9622de6"
+        },
+        {
+            "type": "java",
             "name": "menuMetodo",
             "request": "launch",
             "mainClass": "Metodos_Intro.MenuMetodo.menuMetodo",

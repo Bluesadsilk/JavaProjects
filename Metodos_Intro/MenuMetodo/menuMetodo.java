@@ -39,27 +39,73 @@ public class menuMetodo {
                 break;
 
             case 3:
+                System.out.println("Introduzca minimo");
+                int min = teclado.nextInt();
+                System.out.println("Introduzca máximo");
+                int max = teclado.nextInt();
+                int aceptado = menu.Aceptado(min, max);
+                System.out.println(aceptado);
                 break;
 
             case 4:
+                System.out.println("Introduzca el primer número");
+                int n1m = teclado.nextInt();
+                System.out.println("Introduzca el segundo número");
+                int n2m = teclado.nextInt();
+                System.out.println("Introduzca el tercer número");
+                int n3m = teclado.nextInt();
+                System.out.println("El menor de ");
+                System.out.print(n1m + ", " + n2m + ", " + n3m + " es  ");
+                System.out.print(menu.elMenor(n1m, n2m, n3m) + " ");
+
                 break;
 
             case 5:
+                System.out.println("Introduzca número de filas");
+                int filas = teclado.nextInt();
+                menu.TrianguloRectangulo(filas);
                 break;
 
             case 6:
+
+                System.out.println("Introduzca primer número");
+                int n1M = teclado.nextInt();
+                System.out.println("Introduzca segundo número");
+                int n2M = teclado.nextInt();
+                System.out.println("Introduzca tercer número");
+                int n3M = teclado.nextInt();
+
+                menu.elMayor(n1M, n2M, n3M);
+
                 break;
 
             case 7:
+                System.out.println("Introduzca número de filas");
+                int filasP = teclado.nextInt();
+                menu.Piramide(filasP);
                 break;
 
             case 8:
+                System.out.println("Introduzca número");
+                int ntabla = teclado.nextInt();
+                menu.TablaMult(ntabla);
                 break;
 
             case 9:
+                System.out.println("Introduzca la primera nota");
+                double nota1 = teclado.nextDouble();
+                System.out.println("Introduzca la segunda nota");
+                double nota2 = teclado.nextDouble();
+                System.out.println("Introduzca la terecera nota");
+                double nota3 = teclado.nextDouble();
+                System.out.println(menu.NotaMedia(nota1, nota2, nota3));
+
                 break;
 
             case 10:
+                System.out.println("Introduzca número");
+                int numSumatorio = teclado.nextInt();
+                menu.Sumatorio(numSumatorio);
                 break;
 
             case 11:
