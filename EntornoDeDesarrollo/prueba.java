@@ -1,6 +1,20 @@
+/*
+*
+* 
+*
+* Creada el 06 nov 2023, 16:50:22
+*
+* Desarrollada por Bluesadsilk en l'empresa Abastos el dia 06 nov 2023
+*
+* Email de contacto: bluesadsilk@proton.me
+*
+*
+* @autor Bluesadsilk
+* @date 06 nov 2023
+*/
 package EntornoDeDesarrollo;
 
-public class edprueba {
+public class prueba {
 
     public static void main(String[] args) {
 

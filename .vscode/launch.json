@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "pruebaDebug",
+            "request":"launch",
+            "mainClass": "EntornoDeDesarrollo.pruebaDebug",
+            "projectName": "JavaProjects_a9622de6"
+        },
+        {
+            "type": "java",
             "name": "edprueba",
             "request": "launch",
             "mainClass": "EntornoDeDesarrollo.edprueba",
