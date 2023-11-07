@@ -22,6 +22,16 @@ public class nMalFunction {
 
     public void DibujarTronco(int nTri) {
 
+        for (int i = 0; i < nTri; i++) {
+
+            System.out.print(" ");
+        }
+
+        for (int j = 0; j < nTri; j++) {
+            System.out.print("*");
+        }
+
+        System.out.println("");
     }
 
     public void DibujarMaceta(int nTri) {
