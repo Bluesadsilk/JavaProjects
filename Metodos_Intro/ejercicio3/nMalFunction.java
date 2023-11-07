@@ -16,29 +16,31 @@ package Metodos_Intro.ejercicio3;
 
 public class nMalFunction {
 
+    int nAsteriscos = 1;
+    int nEspacios = 1;
+
     public void DibujarTriangulo(int nTri) {
 
     }
 
     public void DibujarTronco(int nTri) {
 
-        for (int i = 0; i < nTri; i++) {
+        for (int h = 0; h < nTri; h++) {
 
-            System.out.print(" ");
+            for (int i = 0; i < nTri; i++) {
+
+                System.out.print(" ");
+            }
+
+            for (int j = 0; j < nTri; j++) {
+                System.out.print("*");
+            }
+
+            System.out.println("");
         }
-
-        for (int j = 0; j < nTri; j++) {
-            System.out.print("*");
-        }
-
-        System.out.println("");
     }
 
     public void DibujarMaceta(int nTri) {
-
-    }
-
-    public nMalFunction() {
 
     }
 

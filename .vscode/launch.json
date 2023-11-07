@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "arbolNMal",
+            "request": "launch",
+            "mainClass": "Metodos_Intro.ejercicio3.arbolNMal",
+            "projectName": "JavaProjects_a9622de6"
+        },
+        {
+            "type": "java",
             "name": "prueba",
             "request": "launch",
             "mainClass": "EntornoDeDesarrollo.prueba",
