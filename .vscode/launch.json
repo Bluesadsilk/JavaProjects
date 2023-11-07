@@ -6,8 +6,15 @@
     "configurations": [
         {
             "type": "java",
+            "name": "prueba",
+            "request": "launch",
+            "mainClass": "EntornoDeDesarrollo.prueba",
+            "projectName": "JavaProjects_a9622de6"
+        },
+        {
+            "type": "java",
             "name": "pruebaDebug",
-            "request":"launch",
+            "request": "launch",
             "mainClass": "EntornoDeDesarrollo.pruebaDebug",
             "projectName": "JavaProjects_a9622de6"
         },
