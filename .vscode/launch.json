@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ej1modified",
+            "request": "launch",
+            "mainClass": "Metodos_Intro.ejercicio2.ej1modified",
+            "projectName": "JavaProjects_a9622de6"
+        },
+        {
+            "type": "java",
+            "name": "lineasXN",
+            "request": "launch",
+            "mainClass": "Metodos_Intro.ejercicio1.lineasXN",
+            "projectName": "JavaProjects_a9622de6"
+        },
+        {
+            "type": "java",
             "name": "arbolNMal",
             "request": "launch",
             "mainClass": "Metodos_Intro.ejercicio3.arbolNMal",
