@@ -16,31 +16,36 @@ package Metodos_Intro.ejercicio3;
 
 public class nMalFunction {
 
-    int nAsteriscos = 1;
-    int nEspacios = 1;
-
     public void DibujarTriangulo(int nTri) {
+        int form1 = 5 + (2 * (nTri - 1));
+        int asteriscos = 1;
+        int espacios = (form1 - 1) / 2;
+
+        for (int i = 0; i <= 3; i++) {
+
+            for (int j = 0; j <= espacios; j++) {
+                System.out.print(" ");
+
+                for (int j2 = 0; j2 <= asteriscos; j2++) {
+                    System.out.print("*");
+
+                }
+
+            }
+            System.out.println("");
+            asteriscos = asteriscos + 2;
+            espacios--;
+        }
 
     }
 
     public void DibujarTronco(int nTri) {
+        int form1 = 5 + (2 * (nTri - 1));
 
-        for (int h = 0; h < nTri; h++) {
-
-            for (int i = 0; i < nTri; i++) {
-
-                System.out.print(" ");
-            }
-
-            for (int j = 0; j < nTri; j++) {
-                System.out.print("*");
-            }
-
-            System.out.println("");
-        }
     }
 
     public void DibujarMaceta(int nTri) {
+        int form1 = 5 + (2 * (nTri - 1));
 
     }
 

@@ -25,7 +25,6 @@ public class arbolNMal {
         System.out.println("Introduzca el número de triángulos que desea que tenga el árbol de navidad");
         int nTri = teclado.nextInt();
         teclado.close();
-        System.out.println(nTri);
 
         callFunction.DibujarTriangulo(nTri);
         callFunction.DibujarTronco(nTri);
