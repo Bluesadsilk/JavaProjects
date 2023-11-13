@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "pruebaEd",
+            "request": "launch",
+            "mainClass": "EntornoDeDesarrollo.pruebaEd",
+            "projectName": "JavaProjects_a9622de6"
+        },
+        {
+            "type": "java",
             "name": "ej1modified",
             "request": "launch",
             "mainClass": "Metodos_Intro.ejercicio2.ej1modified",
