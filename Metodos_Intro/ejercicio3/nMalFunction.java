@@ -26,9 +26,19 @@ public class nMalFunction {
 
                 for (int j2 = 0; j2 < espacios; j2++) {
                     System.out.print(" ");
+                
                 }
+                 if (j % 3 == 0) {
+                        if (j2 == espacios - 1) {
+                            System.out.print("0");
+                            j2++;
+                        }
+                    }
+
                 for (int j2 = 0; j2 < asteriscos; j2++) {
+
                     System.out.print("*");
+
                 }
                 System.out.println();
                 asteriscos = asteriscos + 2;

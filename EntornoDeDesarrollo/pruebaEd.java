@@ -23,6 +23,11 @@ public class pruebaEd {
             System.out.println("Estás en " + contador);
             contador++;
 
+            if (contador % 2 == 0) {
+
+                System.out.println("hola");
+            }
+
         }
 
     }
