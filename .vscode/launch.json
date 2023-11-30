@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ej1",
+            "request": "launch",
+            "mainClass": "MatricesUnidimensionales.EJCaja.ej1",
+            "projectName": "JavaProjects_a9622de6"
+        },
+        {
+            "type": "java",
+            "name": "spalr",
+            "request": "launch",
+            "mainClass": "Metodos_Strings.EJExamen.spalr",
+            "projectName": "JavaProjects_a9622de6"
+        },
+        {
+            "type": "java",
+            "name": "sporl",
+            "request": "launch",
+            "mainClass": "Metodos_Strings.EJExamen.sporl",
+            "projectName": "JavaProjects_a9622de6"
+        },
+        {
+            "type": "java",
+            "name": "NombreApellido",
+            "request": "launch",
+            "mainClass": "Metodos_Strings.Ej1.NombreApellido",
+            "projectName": "JavaProjects_a9622de6"
+        },
+        {
+            "type": "java",
             "name": "pruebaEd",
             "request": "launch",
             "mainClass": "EntornoDeDesarrollo.pruebaEd",
