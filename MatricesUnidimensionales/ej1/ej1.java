@@ -29,6 +29,8 @@ public class ej1 {
         System.out.println("1. Muestre la suma del rango y numero indicados.");
         System.out.println("2. Muestra los arrays con los parámetros.");
         System.out.println("3. Muestra la media de las notas y las notas por debajo de esta");
+        System.out.println("4. Muestra un vector con 15 cordenadas al revés");
+        System.out.println("5. Comprueba y muestra el valor máximo de un vector, asi como su posición");
         int num = teclado.nextInt();
 
         switch (num) {
@@ -48,7 +50,16 @@ public class ej1 {
 
                 break;
 
+            case 4:
+                menu.elCuatro();
+                break;
+
+            case 5:
+                menu.elCinco();
+                break;
+
             default:
+
                 break;
         }
 

@@ -161,4 +161,79 @@ public class metodos_Ej1 {
 
     }
 
+    public void elCuatro() {
+
+        int numeros[] = new int[15];
+
+        for (int i = 0; i < numeros.length; i++) {
+
+            System.out.println("Introduzca número");
+            numeros[i] = teclado.nextInt();
+        }
+
+        for (int i = 14; i >= 0; i--) {
+
+            System.out.print(numeros[i]);
+        }
+
+    }
+
+    public void elCinco() {
+
+        int min = 1;
+        int max = 100;
+        int rango = max - min + 1;
+        int[] vct = new int[10];
+        for (int i = 0; i < vct.length; i++) {
+
+            vct[i] = (int) (Math.random() * rango) + min;
+
+        }
+
+        int elMayor = 0;
+        int posicion = 0;
+
+        for (int i = 0; i < vct.length; i++) {
+
+            if (vct[i] > elMayor) {
+
+                elMayor = vct[i];
+                posicion = i;
+            }
+
+        }
+
+        System.out.println("El mayor es " + elMayor + " y su posición el vector es " + posicion);
+
+    }
+
+    public void elSeis() {
+        int min = 0;
+        int max = 9;
+        int rango = max - min + 1;
+        int[] cap = new int[10];
+
+        for (int i = 0; i < cap.length; i++) {
+
+            cap[i] = (int) (Math.random() * rango) + min;
+
+        }
+        Boolean capicua = true;
+
+        for (int i = 0, j = cap.length - 1; i < cap.length; i++, j--) {
+
+            capicua = j == i;
+
+        }
+        System.out.println("soy necrozoofilico");
+        if (capicua == true) {
+
+            System.out.println(cap + " es capicua");
+
+        }
+
+        else {
+            System.out.println(cap + " no es capicua");
+        }
+    }
 }
