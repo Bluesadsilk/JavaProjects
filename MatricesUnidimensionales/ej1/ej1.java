@@ -31,6 +31,9 @@ public class ej1 {
         System.out.println("3. Muestra la media de las notas y las notas por debajo de esta");
         System.out.println("4. Muestra un vector con 15 cordenadas al revés");
         System.out.println("5. Comprueba y muestra el valor máximo de un vector, asi como su posición");
+        System.out.println("6. Muestra si el número es capicua");
+        System.out.println("7. Muestra las marcas de los diferentes equipos");
+
         int num = teclado.nextInt();
 
         switch (num) {

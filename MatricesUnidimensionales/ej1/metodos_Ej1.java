@@ -14,6 +14,7 @@
 */
 package MatricesUnidimensionales.ej1;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class metodos_Ej1 {
@@ -225,19 +226,41 @@ public class metodos_Ej1 {
             capicua = j == i;
 
         }
-        System.out.println("soy necrozoofilico");
+
         if (capicua == true) {
 
-            System.out.println(cap + " es capicua");
+            System.out.println(Arrays.toString(cap) + " es capicua");
 
         }
 
         else {
-            System.out.println(cap + " no es capicua");
+            System.out.println(Arrays.toString(cap) + " no es capicua");
         }
     }
 
     public void elSiete() {
+
+        double[] equipos = new double[10];
+        int min = 100;
+        int max = 1000;
+        int rango = max - min + 1;
+
+        for (int j = 0; j < equipos.length; j++) {
+
+            for (int i = 0; i < equipos.length; i++) {
+
+                double marca = Math.random() * rango + min;
+                System.out.println(marca);
+                equipos[i] += marca;
+
+            }
+        }
+
+        for (int i = 0; i < equipos.length; i++) {
+
+            System.out.println("La marca del equipo " + i + " es " + equipos[i]);
+
+        }
 
     }
 }

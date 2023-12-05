@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "laPrimitiva",
+            "request": "launch",
+            "mainClass": "MatricesUnidimensionales.LaPrimitiva.laPrimitiva",
+            "projectName": "JavaProjects_a9622de6"
+        },
+        {
+            "type": "java",
             "name": "ej1",
             "request": "launch",
             "mainClass": "MatricesUnidimensionales.ej1.ej1",
