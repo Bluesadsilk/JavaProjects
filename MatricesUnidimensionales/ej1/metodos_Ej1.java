@@ -236,4 +236,8 @@ public class metodos_Ej1 {
             System.out.println(cap + " no es capicua");
         }
     }
+
+    public void elSiete() {
+
+    }
 }

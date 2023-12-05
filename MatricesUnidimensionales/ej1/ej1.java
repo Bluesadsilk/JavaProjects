@@ -59,7 +59,12 @@ public class ej1 {
                 break;
 
             case 6:
-                menu.elCinco();
+                menu.elSeis();
+                break;
+
+            case 7:
+                menu.elSiete();
+                break;
 
             default:
 
