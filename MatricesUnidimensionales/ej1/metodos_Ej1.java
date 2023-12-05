@@ -263,4 +263,21 @@ public class metodos_Ej1 {
         }
 
     }
+
+    public void elOcho() {
+
+        int min = 100;
+        int max = 1000;
+        int rango = max - min + 1;
+        double[] equipos = new double[10];
+
+        for (int i = 0; i < 100; i++) {
+
+            double marca = Math.random() * rango + min;
+            System.out.println(marca);
+            equipos[i % 10] += marca;
+
+        }
+
+    }
 }

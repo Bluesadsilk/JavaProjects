@@ -32,11 +32,24 @@ public class laPrimitiva {
         int rango = max - min + 1;
 
         int[] chooseNum = new int[6];
+
+        boolean stat = true;
         switch (option) {
             case 1:
 
                 for (int i = 0; i < chooseNum.length; i++) {
+                    stat = true;
                     chooseNum[i] = (int) (Math.random() * rango + min);
+
+                    for (int j = 0; j < i; j++) {
+
+                        if (chooseNum[i] == chooseNum[j]) {
+                            stat = false;
+                            System.out.println("Número no válido");
+                            break;
+                        }
+
+                    }
 
                 }
 
@@ -46,6 +59,12 @@ public class laPrimitiva {
 
                 for (int i = 0; i < chooseNum.length; i++) {
                     System.out.println("Introduzca número");
+                    chooseNum[i] = teclado.nextInt();
+                    if (chooseNum[i] < 0 || chooseNum[i] > 49) {
+                        System.out.println("Numero erróneo");
+                        i--;
+
+                    }
 
                 }
 
