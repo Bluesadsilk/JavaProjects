@@ -58,6 +58,9 @@ public class ej1 {
                 menu.elCinco();
                 break;
 
+            case 6:
+                menu.elCinco();
+
             default:
 
                 break;
