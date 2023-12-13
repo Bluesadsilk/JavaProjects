@@ -20,8 +20,7 @@ import java.util.Scanner;
 public class laPrimitiva {
 
     Scanner teclado = new Scanner(System.in);
-    int min, max, rango = max - min + 1;
-
+    int min, max;
     int[] chooseNum = new int[6];
     boolean stat = true;
 
@@ -29,19 +28,25 @@ public class laPrimitiva {
     public int[] NumGen() {
         min = 1;
         max = 49;
+        int rango = max - min + 1;
         for (int i = 0; i < chooseNum.length; i++) {
-            stat = true;
-            chooseNum[i] = (int) (Math.random() * rango + min);
 
-            for (int j = 0; j < i; j++) {
+            do {
+                chooseNum[i] = (int) (Math.random() * rango + min);
+                stat = true;
+                for (int j = 0; j < i; j++) {
+                    if (chooseNum[i] == chooseNum[j]) {
+                        stat = false;
 
-                if (chooseNum[i] == chooseNum[j]) {
-                    stat = false;
-                    System.out.println("Número no válido");
-                    break;
+                    }
+
                 }
+            } while (!stat);
 
-            }
+            // mientras no sea valido
+            // generar num
+            // comprobar si es valido
+            // si es válido sale
 
         }
 
@@ -51,17 +56,27 @@ public class laPrimitiva {
     // Permita al usuario ingresar los números del vector posición por posición y
     // los contrasta para ver si són válidos.
     public int[] NumUser() {
-        min = 1;
-        max = 49;
+
         for (int i = 0; i < chooseNum.length; i++) {
-            System.out.println("Introduzca número");
-            chooseNum[i] = teclado.nextInt();
-            if (chooseNum[i] < 0 || chooseNum[i] > 49) {
-                System.out.println("Numero erróneo");
-                i--;
 
-            }
+            do {
+                chooseNum[i] = teclado.nextInt();
 
+                while (chooseNum[i] <= 0 || chooseNum[i] >= 50) {
+                    System.out.println("Número no válido, por favor introduzca un número comprendido entre 1 y 49");
+                    chooseNum[i] = teclado.nextInt();
+
+                }
+                stat = true;
+                for (int j = 0; j < i; j++) {
+                    if (chooseNum[i] == chooseNum[j]) {
+                        stat = false;
+                        System.out.println("Número no válido, por favor introduzca un número válido");
+
+                    }
+
+                }
+            } while (!stat);
         }
 
         return chooseNum;
@@ -99,6 +114,7 @@ public class laPrimitiva {
     public int Reintegro() {
         min = 0;
         max = 9;
+        int rango = max - min + 1;
         int reintegro = (int) (Math.random() * rango + min);
         return reintegro;
     }
@@ -107,6 +123,7 @@ public class laPrimitiva {
     public int Complementario() {
         min = 0;
         max = 49;
+        int rango = max - min + 1;
         int complementario = (int) (Math.random() * rango + min);
         return complementario;
     }
@@ -123,7 +140,7 @@ public class laPrimitiva {
 
         int numAciertos = 0;
         boolean valComp = false;
-
+        System.out.println(valComp);
         for (int i = 0; i < numSorteo.length; i++) {
 
             if (numApuesta[i] == numSorteo[i]) {
