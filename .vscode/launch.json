@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Entregables",
+            "request": "launch",
+            "mainClass": "MatricesUnidimensionales.EjerciciosEntregables.Entregables",
+            "projectName": "JavaProjects_a9622de6"
+        },
+        {
+            "type": "java",
             "name": "laPrimitiva",
             "request": "launch",
             "mainClass": "MatricesUnidimensionales.LaPrimitiva.laPrimitiva",
