@@ -89,15 +89,26 @@ public class laPrimitiva {
         System.out.println("Elija la forma que desea para obtener el número de su apuesta");
         System.out.println("1. Aleatorio");
         System.out.println("2. Introducir número");
-        int option = teclado.nextInt();
+        int option = 0;
+
+        // Bucle para obligar a elegir una opción válida
+        while (option != 1 || option != 2) {
+            option = teclado.nextInt();
+            if (option != 1 || option != 2) {
+                System.out.println("Opción no válida");
+            }
+        }
 
         switch (option) {
+            // Llama a la función NumGen que crea el número aleatorio.
             case 1:
                 chooseNum = NumGen();
                 break;
 
             case 2:
-
+                // Llama a la función NumUser para que el usuario pueda introducir el número
+                // manualmente.
+                System.out.println("Introduzca el primer número");
                 chooseNum = NumUser();
 
             default:
@@ -105,6 +116,7 @@ public class laPrimitiva {
                 break;
         }
 
+        // Comunica al usuario el número jugador
         System.out.println("Su numero es: " + Arrays.toString(chooseNum));
         return chooseNum;
 
@@ -130,8 +142,15 @@ public class laPrimitiva {
 
     // Realiza la operación para calcular el número ganador.
     public int[] Sorteo() {
-
+        min = 0;
+        max = 49;
+        int rango = max - min + 1;
         int[] numSorteo = new int[6];
+        for (int i = 0; i < numSorteo.length; i++) {
+            numSorteo[i] = (int) (Math.random() * rango + min);
+        }
+        // Comunica al usuario el número premiado
+        System.out.println("El numero premiado es: " + Arrays.toString(numSorteo));
         return numSorteo;
     }
 
@@ -139,22 +158,75 @@ public class laPrimitiva {
     public void Premios(int reintegro, int complementario, int[] numApuesta, int[] numSorteo) {
 
         int numAciertos = 0;
-        boolean valComp = false;
-        System.out.println(valComp);
+        boolean reintegroComp = false;
+        boolean complementarioComp = false;
+
         for (int i = 0; i < numSorteo.length; i++) {
 
             if (numApuesta[i] == numSorteo[i]) {
                 numAciertos++;
             }
+            if (numApuesta[i] == reintegro) {
+                reintegroComp = true;
+
+            }
+            if (numApuesta[i] == complementario) {
+                complementarioComp = true;
+
+            }
         }
 
-        if (numAciertos == 5) {
-            valComp = true;
+        // Switch para repartir los premios sin contar el reintegro
+        switch (numAciertos) {
+            case 1:
+                System.out.println("Su número ha sido premiado con 1 acierto");
 
+                break;
+
+            case 2:
+                System.out.println("Su número ha sido premiado con 2 aciertos");
+
+                break;
+
+            case 3:
+                System.out.println("Su número ha sido premiado con 3 aciertos");
+
+                break;
+
+            case 4:
+                System.out.println("Su número ha sido premiado con 4 aciertos.");
+
+                break;
+
+            // Si el número de aciertos equivale a 5 identifica si el complementario aparece
+            // en el número jugador
+            case 5:
+                if (complementarioComp == true) {
+                    System.out.println("Su número ha sido premiado con 5 aciertos y el número complementario.");
+
+                } else {
+                    System.out.println("Su número ha sido premiado con 5 aciertos.");
+                }
+
+                break;
+
+            case 6:
+                System.out.println("Su número ha sido premiado con 6 aciertos.");
+
+                break;
+
+            default:
+                System.out.println("Su número no ha sido premiado");
+                break;
         }
 
-        System.out.println("Su permio es " + numAciertos);
-        System.out.println("Perdedor");
+        if (reintegroComp == true) {
+            System.out.println("Su número ha obtenido el reintegro");
+        }
+
+        else {
+            System.out.println("Su número no ha obtenido el reintegro");
+        }
 
     }
 
