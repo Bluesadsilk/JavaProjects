@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ejemplo",
+            "request": "launch",
+            "mainClass": "MatricesBidimensionales.Ejemplo.ejemplo",
+            "projectName": "JavaProjects_a9622de6"
+        },
+        {
+            "type": "java",
             "name": "Entregables",
             "request": "launch",
             "mainClass": "MatricesUnidimensionales.EjerciciosEntregables.Entregables",

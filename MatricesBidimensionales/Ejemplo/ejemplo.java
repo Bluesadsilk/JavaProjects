@@ -19,17 +19,27 @@ public class ejemplo {
     public int[][] GeneraMatriz() {
         int min = 1;
         int max = 10;
-        int rango = max + min + 1;
-        int[][] tablaAlumnosNotas = new int[15][3];
-        for (int i = 0; i < tablaAlumnosNotas.length; i++) {
-            tablaAlumnosNotas[i][i] = i;
-            for (int j = 0; j < tablaAlumnosNotas.length; j++) {
-                tablaAlumnosNotas[i][j] = (int) (Math.random() * rango + 1);
+        int rango = max - min + 1;
+        int[][] tablaAlumnosNotas = new int[45][3];
+
+        for (int f = 0; f < tablaAlumnosNotas.length; f++) {
+            for (int c = 0; c < tablaAlumnosNotas[f].length; c++) {
+                tablaAlumnosNotas[f][c] = (int) (Math.random() * rango + min);
 
             }
 
         }
         return tablaAlumnosNotas;
+    }
+
+    public int NotaMedia(int[][] matriz) {
+        int media = 0;
+        for (int i = 0; i < matriz.length; i++) {
+            media += matriz[i][i];
+        }
+
+        media /= matriz.length;
+        return media;
     }
 
     public ejemplo() {

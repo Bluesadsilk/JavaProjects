@@ -92,9 +92,9 @@ public class laPrimitiva {
         int option = 0;
 
         // Bucle para obligar a elegir una opción válida
-        while (option != 1 || option != 2) {
+        while (option != 1 && option != 2) {
             option = teclado.nextInt();
-            if (option != 1 || option != 2) {
+            if (option != 1 && option != 2) {
                 System.out.println("Opción no válida");
             }
         }
@@ -122,12 +122,20 @@ public class laPrimitiva {
 
     }
 
+    // Metodo genera el reintegro del usuario
+    public int usuarioReintegro() {
+        int userReintegro = (int) (Math.random() * 10);
+        System.out.println("Su número de reintegro es:" + userReintegro);
+        return userReintegro;
+    }
+
     // Realiza la operación para calcular el número de reintegro.
     public int Reintegro() {
         min = 0;
         max = 9;
         int rango = max - min + 1;
         int reintegro = (int) (Math.random() * rango + min);
+        System.out.println("El número de reintegro es :" + reintegro);
         return reintegro;
     }
 
@@ -137,6 +145,7 @@ public class laPrimitiva {
         max = 49;
         int rango = max - min + 1;
         int complementario = (int) (Math.random() * rango + min);
+        System.out.println("El número complementario es :" + complementario);
         return complementario;
     }
 
@@ -155,25 +164,27 @@ public class laPrimitiva {
     }
 
     // Realiza la asignación de premios una vez se tienen todas las variables.
-    public void Premios(int reintegro, int complementario, int[] numApuesta, int[] numSorteo) {
+    public void Premios(int reintegro, int complementario, int[] numApuesta, int[] numSorteo, int reintegroUsuario) {
 
         int numAciertos = 0;
         boolean reintegroComp = false;
         boolean complementarioComp = false;
 
-        for (int i = 0; i < numSorteo.length; i++) {
+        if (reintegroUsuario == reintegro) {
+            reintegroComp = true;
 
-            if (numApuesta[i] == numSorteo[i]) {
-                numAciertos++;
-            }
-            if (numApuesta[i] == reintegro) {
-                reintegroComp = true;
+            for (int i = 0; i < numSorteo.length; i++) {
+
+                if (numApuesta[i] == numSorteo[i]) {
+                    numAciertos++;
+                }
+                if (numApuesta[i] == complementario) {
+                    complementarioComp = true;
+
+                }
 
             }
-            if (numApuesta[i] == complementario) {
-                complementarioComp = true;
 
-            }
         }
 
         // Switch para repartir los premios sin contar el reintegro
@@ -235,14 +246,27 @@ public class laPrimitiva {
     }
 
     public static void main(String[] args) {
+
+        // Llama al metodo constructor.
         laPrimitiva Menu = new laPrimitiva();
 
+        // Menú para escoger el número jugador, generado o introducido y mostrarlo.
         int[] numJugador = Menu.NumApuesta();
-        int reintegro = Menu.Reintegro();
-        int complementario = Menu.Complementario();
+
+        // Genera el número de reintegro jugador y lo muestra.
+        int userReintegro = Menu.usuarioReintegro();
+
+        // Genera el número ganador y lo muestra.
         int[] numGanador = Menu.Sorteo();
 
-        Menu.Premios(reintegro, complementario, numJugador, numGanador);
+        // Genera el número de reintegro y lo muestra.
+        int reintegro = Menu.Reintegro();
+
+        // Genera el número complementario y lo muestra.
+        int complementario = Menu.Complementario();
+
+        // Compara los números y muestra los premios.
+        Menu.Premios(reintegro, complementario, numJugador, numGanador, userReintegro);
 
     }
 
