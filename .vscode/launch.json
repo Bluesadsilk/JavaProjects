@@ -9,6 +9,13 @@
             "name": "EjMatricesDos",
             "request": "launch",
             "mainClass": "MatricesBidimensionales.MatricesDos.EjMatricesDos",
+            "projectName": "JavaProjects_a9622de6"
+        },
+        {
+            "type": "java",
+            "name": "EjMatricesDos",
+            "request": "launch",
+            "mainClass": "MatricesBidimensionales.MatricesDos.EjMatricesDos",
             "projectName": "JavaProjects_b39a5907"
         },
         {

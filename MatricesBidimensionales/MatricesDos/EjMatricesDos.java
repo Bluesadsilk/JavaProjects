@@ -76,6 +76,69 @@ public class EjMatricesDos {
         return matrizSuma;
     }
 
+    public void Enseña() {
+        int menor = 100;
+        String menorPosicion = "";
+
+        int mayor = 0;
+        String mayorPosicion = "";
+
+        int menorFila = 0;
+        String menorFilaPosicion = "";
+
+        int menorColumna = 0;
+        String menorColumnaPosicion = "";
+
+        int suma = 0;
+        int[][] matriz = new int[3][6];
+        for (int i = 0; i < matriz.length; i++) {
+
+            for (int j = 0; j < matriz[i].length; j++) {
+                matriz[i][j] = (int) (Math.random() * 100 + 1);
+                menor = Math.min(menor, j);
+                mayor = Math.max(mayor, j);
+                suma += matriz[i][j];
+            }
+
+        }
+        int media = suma / (matriz.length * matriz[1].length);
+
+        System.out.println("El menor número de la matriz es = " + menor + " y su posición es " + menorPosicion);
+
+        System.out.println("El mayor número de la matriz es = " + mayor + " y su posición es " + mayorPosicion);
+
+        System.out.println("El menor número de la fila es = " + menorFila + " y su posición es " + menorFilaPosicion);
+
+        System.out.println(
+                "El menor número de la columna es = " + menorColumna + " y su posición es " + menorColumnaPosicion);
+
+        System.out.println("La media de todos los números es = " + media);
+
+        System.out.println("La suma de todos los números es = " + suma);
+
+    }
+
+    public void VerificaDiagonal() {
+        int[][] matriz = new int[4][4];
+        boolean comprobador = true;
+
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz.length; j++) {
+                matriz[i][j] = (int) (Math.random() * 2 + 1);
+            }
+            if (matriz[0][0] != matriz[i][i]) {
+                comprobador = false;
+            }
+        }
+        System.out.println(Arrays.deepToString(matriz));
+        if (comprobador == true) {
+            System.out.println("Es simétrica");
+
+        } else {
+            System.out.println("No es simétrica");
+        }
+    }
+
     public static void main(String[] args) {
 
         EjMatricesDos Menu = new EjMatricesDos();
@@ -94,6 +157,14 @@ public class EjMatricesDos {
         int[][] matriz3 = Menu.SumaMatrices();
 
         System.out.println(Arrays.deepToString(matriz3));
+
+        // Llama al procedimiento que enseña parámetros de dentro de una matriz de 3x6.
+        Menu.Enseña();
+
+        // Llama al procedimineto que genera una matriz de 4x4 y verifica si la diagonal
+        // es simétrica
+        Menu.VerificaDiagonal();
+
     }
 
 }
