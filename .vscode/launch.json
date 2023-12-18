@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "EjMatricesDos",
+            "request": "launch",
+            "mainClass": "MatricesBidimensionales.MatricesDos.EjMatricesDos",
+            "projectName": "JavaProjects_b39a5907"
+        },
+        {
+            "type": "java",
+            "name": "ejemplo",
+            "request": "launch",
+            "mainClass": "MatricesBidimensionales.Ejemplo.ejemplo",
+            "projectName": "JavaProjects_b39a5907"
+        },
+        {
+            "type": "java",
+            "name": "laPrimitiva",
+            "request": "launch",
+            "mainClass": "MatricesUnidimensionales.LaPrimitiva.laPrimitiva",
+            "projectName": "JavaProjects_b39a5907"
+        },
+        {
+            "type": "java",
             "name": "ejemplo",
             "request": "launch",
             "mainClass": "MatricesBidimensionales.Ejemplo.ejemplo",
