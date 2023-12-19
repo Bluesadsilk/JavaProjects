@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "supermercado",
+            "request": "launch",
+            "mainClass": "MatricesBidimensionales.Supermercado.supermercado",
+            "projectName": "JavaProjects_a9622de6"
+        },
+        {
+            "type": "java",
             "name": "EjMatricesDos",
             "request": "launch",
             "mainClass": "MatricesBidimensionales.MatricesDos.EjMatricesDos",

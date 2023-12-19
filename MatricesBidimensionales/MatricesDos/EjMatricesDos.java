@@ -78,16 +78,12 @@ public class EjMatricesDos {
 
     public void Enseña() {
         int menor = 100;
-        String menorPosicion = "";
 
         int mayor = 0;
-        String mayorPosicion = "";
 
         int menorFila = 0;
-        String menorFilaPosicion = "";
 
         int menorColumna = 0;
-        String menorColumnaPosicion = "";
 
         int suma = 0;
         int[][] matriz = new int[3][6];
@@ -103,14 +99,18 @@ public class EjMatricesDos {
         }
         int media = suma / (matriz.length * matriz[1].length);
 
-        System.out.println("El menor número de la matriz es = " + menor + " y su posición es " + menorPosicion);
+        System.out.println("El menor número de la matriz es = " + menor + " y su posición es "
+                + Arrays.binarySearch(matriz, menor));
 
-        System.out.println("El mayor número de la matriz es = " + mayor + " y su posición es " + mayorPosicion);
+        System.out.println("El mayor número de la matriz es = " + mayor + " y su posición es "
+                + Arrays.binarySearch(matriz, mayor));
 
-        System.out.println("El menor número de la fila es = " + menorFila + " y su posición es " + menorFilaPosicion);
+        System.out.println("El menor número de la fila es = " + menorFila + " y su posición es "
+                + Arrays.binarySearch(matriz, menorFila));
 
         System.out.println(
-                "El menor número de la columna es = " + menorColumna + " y su posición es " + menorColumnaPosicion);
+                "El menor número de la columna es = " + menorColumna + " y su posición es "
+                        + Arrays.binarySearch(matriz, menorColumna));
 
         System.out.println("La media de todos los números es = " + media);
 
