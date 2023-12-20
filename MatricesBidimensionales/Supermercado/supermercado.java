@@ -14,7 +14,6 @@
 */
 package MatricesBidimensionales.Supermercado;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class supermercado {
