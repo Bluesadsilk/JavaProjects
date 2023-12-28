@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ElAhorcado",
+            "request": "launch",
+            "mainClass": "MatricesBidimensionales.ElAhorcado.ElAhorcado",
+            "projectName": "JavaProjects_b39a5907"
+        },
+        {
+            "type": "java",
             "name": "Talleres",
             "request": "launch",
             "mainClass": "MatricesBidimensionales.Talleres.Talleres",
