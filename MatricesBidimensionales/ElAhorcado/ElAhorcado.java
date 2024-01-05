@@ -243,7 +243,7 @@ public class ElAhorcado {
 
             switch (gameOption) {
                 case 1:
-                    ChooseLetter(board);
+                    ChooseLetter();
                     break;
 
                 case 2:
