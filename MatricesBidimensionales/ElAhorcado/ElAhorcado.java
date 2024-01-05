@@ -40,6 +40,7 @@ public class ElAhorcado {
         while (option > 3 && option < 1) {
             System.out.println("Opción no válida, por favor introduzca una opción válida");
             option = teclado.nextInt();
+            teclado.nextLine();
         }
         return option;
     }
@@ -69,6 +70,11 @@ public class ElAhorcado {
     // Metodo para válidar la palabra.
     public boolean ValidateWord(String addedWord) {
         boolean validate = true;
+        for (int i = 0; i < WordList.length; i++) {
+            if (addedWord.equals(WordList[i])) {
+                validate = false;
+            }
+        }
         return validate;
     }
 
@@ -179,33 +185,123 @@ public class ElAhorcado {
         }
     }
 
-    // Escoge una palabra aleatoria
-    public String ChooseWord() {
-        int min = 0, max = WordList.length, rango = max - min + 1;
-        int choosedWord = (int) (Math.random() * rango + min);
-        String playWord = WordList[choosedWord];
-        return playWord;
+    // Enseña las opciones del menu de juego
+    public void ShowGameOptions() {
+        System.out.println("1. Introducir letra");
+        System.out.println("2. Adivinar la palabra");
+        System.out.println("3. Salir del juego");
     }
 
-    // Crea un vector de la mimsa cantidad de letras que la palabra
-    public char[] Genboard(String playWord) {
-        char[] gameBoard = new char[playWord.length()];
-        return gameBoard;
-    }
+    public void ShowHangman(int failCounter) {
 
-    // Compara la letra y la encuentra o no en el vector
-    public void SearchLetter() {
-    }
+        switch (failCounter) {
+            case 1:
+                System.out.println(" ---------------------");
+                System.out.println(" |                     |");
+                System.out.println(" |                     |");
+                System.out.println(" |                  -------");
+                System.out.println(" |                 | -  -  |");
+                System.out.println(" |                 |   o   |");
+                System.out.println(" |                  -------");
 
-    // Introduce una letra y válida si se encuentra otorgando un fallo o
-    public void ChooseLetter() {
+                break;
 
-        SearchLetter();
-    }
+            case 2:
+                System.out.println(" ---------------------");
+                System.out.println(" |                     |");
+                System.out.println(" |                     |");
+                System.out.println(" |                  -------");
+                System.out.println(" |                 | -  -  |");
+                System.out.println(" |                 |   o   |");
+                System.out.println(" |                  -------");
+                System.out.println(" |                     |   ");
+                System.out.println(" |                     |   ");
+                System.out.println(" |                     |   ");
+                System.out.println(" |                     |   ");
+                System.out.println(" |                     |   ");
 
-    // Introduce una palabra entera y la válida si es cierta.
-    public void GuessWord() {
+                break;
 
+            case 3:
+                System.out.println(" ---------------------");
+                System.out.println(" |                     |");
+                System.out.println(" |                     |");
+                System.out.println(" |                  -------");
+                System.out.println(" |                 | -  -  |");
+                System.out.println(" |                 |   o   |");
+                System.out.println(" |                  -------");
+                System.out.println(" |                     |   ");
+                System.out.println(" |                   / |   ");
+                System.out.println(" |                 /   |   ");
+                System.out.println(" |                /    |   ");
+                System.out.println(" |                     |   ");
+                break;
+
+            case 4:
+                System.out.println(" ---------------------");
+                System.out.println(" |                     |");
+                System.out.println(" |                     |");
+                System.out.println(" |                  -------");
+                System.out.println(" |                 | -  -  |");
+                System.out.println(" |                 |   o   |");
+                System.out.println(" |                  -------");
+                System.out.println(" |                     |   ");
+                System.out.println(" |                   / | \\ ");
+                System.out.println(" |                  /  |   \\ ");
+                System.out.println(" |                 /   |     \\ ");
+                System.out.println(" |                     |   ");
+                break;
+            case 5:
+                System.out.println(" ---------------------");
+                System.out.println(" |                     |");
+                System.out.println(" |                     |");
+                System.out.println(" |                  -------");
+                System.out.println(" |                 | -  -  |");
+                System.out.println(" |                 |   o   |");
+                System.out.println(" |                  -------");
+                System.out.println(" |                     |   ");
+                System.out.println(" |                   / | \\ ");
+                System.out.println(" |                  /  |   \\ ");
+                System.out.println(" |                 /   |     \\ ");
+                System.out.println(" |                     |   ");
+                System.out.println(" |                    /  ");
+                System.out.println(" |                   /      ");
+                System.out.println(" |                  /       ");
+                break;
+
+            case 6:
+                System.out.println(" ---------------------");
+                System.out.println(" |                     |");
+                System.out.println(" |                     |");
+                System.out.println(" |                  -------");
+                System.out.println(" |                 | X  X  |");
+                System.out.println(" |                 |   o   |");
+                System.out.println(" |                  -------");
+                System.out.println(" |                     |   ");
+                System.out.println(" |                   / | \\ ");
+                System.out.println(" |                  /  |   \\ ");
+                System.out.println(" |                 /   |     \\ ");
+                System.out.println(" |                     |   ");
+                System.out.println(" |                    / \\");
+                System.out.println(" |                   /   \\  ");
+                System.out.println(" |                  /     \\ ");
+                break;
+
+            default:
+                System.out.println(" ---------------------");
+                System.out.println(" |                     |");
+                System.out.println(" |                     |");
+                System.out.println(" |                  -------");
+                System.out.println(" |");
+                System.out.println(" |");
+                System.out.println(" |");
+                System.out.println(" |");
+                System.out.println(" |");
+                System.out.println(" |");
+                System.out.println(" |");
+                System.out.println(" |");
+                break;
+        }
     }
 
     // Muestra el tablero interpretado
@@ -219,11 +315,47 @@ public class ElAhorcado {
         }
     }
 
-    // Enseña las opciones del menu de juego
-    public void ShowGameOptions() {
-        System.out.println("1. Introducir letra");
-        System.out.println("2. Adivinar la palabra");
-        System.out.println("3. Salir del juego");
+    // Escoge una palabra aleatoria
+    public String ChooseWord() {
+        int min = 0, max = WordList.length - 1, rango = max - min + 1;
+        int choosedWord = (int) (Math.random() * rango + min);
+        String playWord = WordList[choosedWord];
+        return playWord;
+    }
+
+    // Crea un vector de la mimsa cantidad de letras que la palabra
+    public char[] Genboard(String playWord) {
+        char[] gameBoard = new char[playWord.length()];
+        return gameBoard;
+    }
+
+    // Introduce una letra y válida si se encuentra otorgando un fallo o
+    public boolean ChooseLetter(String playWord, char[] board) {
+        boolean result = false;
+        System.out.println("Introduzca una letra");
+        char letter = teclado.nextLine().charAt(0);
+        for (int i = 0; i < playWord.length(); i++) {
+            if (letter == playWord.charAt(i)) {
+                result = true;
+                board[i] = letter;
+                System.out.println("Perfecto, ha acertado la letra " + letter);
+            }
+        }
+        return result;
+
+    }
+
+    // Introduce una palabra entera y la válida si es cierta.
+    public boolean GuessWord(String playWord) {
+        boolean result = false;
+        System.out.println("Introduzca la palabra");
+        String userWord = teclado.nextLine().toUpperCase();
+        if (userWord.equals(playWord)) {
+            System.out.println("Ha acertado la palabra");
+            result = true;
+
+        }
+        return result;
     }
 
     // Inicia el juego
@@ -231,23 +363,33 @@ public class ElAhorcado {
         int failCounter = 0;
         int successCounter = 0;
         int exitDoor = 0;
-        int hangmanCondition = 0;
         String playWord = ChooseWord();
         char[] board = Genboard(playWord);
 
         while (true) {
 
-            System.out.println(hangmanCondition);
+            ShowHangman(failCounter);
             ShowBoard(board);
+            System.out.println("1. Adivinar letra");
+            System.out.println("2. Adivinar palabra");
             int gameOption = teclado.nextInt();
 
             switch (gameOption) {
                 case 1:
-                    ChooseLetter();
+                    if (ChooseLetter(playWord, board) == true) {
+                        successCounter++;
+                    } else {
+                        failCounter++;
+                    }
                     break;
 
                 case 2:
-                    GuessWord();
+
+                    if (GuessWord(playWord) == true) {
+                        successCounter = 6;
+                    } else {
+                        failCounter++;
+                    }
                     break;
 
                 case 3:
@@ -257,13 +399,13 @@ public class ElAhorcado {
                     break;
             }
 
-            if (failCounter == playWord.length()) {
-                System.out.println("La victoria es suya");
+            if (failCounter == 6) {
+                System.out.println("Ha sido derrotado");
                 break;
             }
 
             if (successCounter == playWord.length()) {
-                System.out.println("Ha sido derrotado");
+                System.out.println("Ha ganado la partida");
                 break;
             }
 
