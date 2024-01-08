@@ -62,6 +62,7 @@ public class ElAhorcado {
         while (option > 5 && option < 1) {
             System.out.println("Opción no válida, por favor introduzca una opción válida");
             option = teclado.nextInt();
+            teclado.nextLine();
 
         }
         return option;
@@ -308,11 +309,13 @@ public class ElAhorcado {
     public void ShowBoard(char[] board) {
         for (int i = 0; i < board.length; i++) {
             if (board[i] == ' ') {
-                System.out.print("_");
+                System.out.print("_ ");
             } else {
                 System.out.print(board[i] + " ");
             }
+
         }
+        System.out.println("");
     }
 
     // Escoge una palabra aleatoria
@@ -330,14 +333,14 @@ public class ElAhorcado {
     }
 
     // Introduce una letra y válida si se encuentra otorgando un fallo o
-    public boolean ChooseLetter(String playWord, char[] board) {
+    public boolean ChooseLetter(String playWord, char[] gameBoard) {
         boolean result = false;
         System.out.println("Introduzca una letra");
-        char letter = teclado.nextLine().charAt(0);
+        char letter = teclado.nextLine().toUpperCase().charAt(0);
         for (int i = 0; i < playWord.length(); i++) {
             if (letter == playWord.charAt(i)) {
                 result = true;
-                board[i] = letter;
+                gameBoard[i] = letter;
                 System.out.println("Perfecto, ha acertado la letra " + letter);
             }
         }
@@ -363,22 +366,28 @@ public class ElAhorcado {
         int failCounter = 0;
         int successCounter = 0;
         int exitDoor = 0;
+        boolean wordGuessed = false;
         String playWord = ChooseWord();
-        char[] board = Genboard(playWord);
+        char[] gameBoard = Genboard(playWord);
 
         while (true) {
 
             ShowHangman(failCounter);
-            ShowBoard(board);
+            System.out.println("");
+            ShowBoard(gameBoard);
+            System.out.println("");
             System.out.println("1. Adivinar letra");
             System.out.println("2. Adivinar palabra");
             int gameOption = teclado.nextInt();
+            teclado.nextLine();
 
             switch (gameOption) {
                 case 1:
-                    if (ChooseLetter(playWord, board) == true) {
+                    if (ChooseLetter(playWord, gameBoard) == true) {
                         successCounter++;
-                    } else {
+                    }
+
+                    else {
                         failCounter++;
                     }
                     break;
@@ -386,8 +395,10 @@ public class ElAhorcado {
                 case 2:
 
                     if (GuessWord(playWord) == true) {
-                        successCounter = 6;
-                    } else {
+                        wordGuessed = true;
+                    }
+
+                    else {
                         failCounter++;
                     }
                     break;
@@ -399,13 +410,17 @@ public class ElAhorcado {
                     break;
             }
 
-            if (failCounter == 6) {
-                System.out.println("Ha sido derrotado");
+            if (failCounter == playWord.length()) {
+                System.out.println("Ha sido derrotado, la palabra era " + playWord);
                 break;
             }
 
-            if (successCounter == playWord.length()) {
-                System.out.println("Ha ganado la partida");
+            if (successCounter == playWord.length() || wordGuessed == true) {
+                System.out.println("");
+                System.out.println("");
+                System.out.println("Ha ganado la partida, la palabra era " + playWord);
+                System.out.println("");
+                System.out.println("");
                 break;
             }
 
