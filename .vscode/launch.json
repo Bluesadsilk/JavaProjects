@@ -9,6 +9,13 @@
             "name": "ElAhorcado",
             "request": "launch",
             "mainClass": "MatricesBidimensionales.ElAhorcado.ElAhorcado",
+            "projectName": "JavaProjects_a9622de6"
+        },
+        {
+            "type": "java",
+            "name": "ElAhorcado",
+            "request": "launch",
+            "mainClass": "MatricesBidimensionales.ElAhorcado.ElAhorcado",
             "projectName": "JavaProjects_b39a5907"
         },
         {

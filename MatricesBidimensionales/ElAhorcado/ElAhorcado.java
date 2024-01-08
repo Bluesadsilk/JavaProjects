@@ -305,19 +305,6 @@ public class ElAhorcado {
         }
     }
 
-    // Muestra el tablero interpretado
-    public void ShowBoard(char[] board) {
-        for (int i = 0; i < board.length; i++) {
-            if (board[i] == ' ') {
-                System.out.print("_ ");
-            } else {
-                System.out.print(board[i] + " ");
-            }
-
-        }
-        System.out.println("");
-    }
-
     // Escoge una palabra aleatoria
     public String ChooseWord() {
         int min = 0, max = WordList.length - 1, rango = max - min + 1;
@@ -329,7 +316,26 @@ public class ElAhorcado {
     // Crea un vector de la mimsa cantidad de letras que la palabra
     public char[] Genboard(String playWord) {
         char[] gameBoard = new char[playWord.length()];
+        for (int i = 0; i < gameBoard.length; i++) {
+            gameBoard[i] = ' ';
+        }
         return gameBoard;
+    }
+
+    // Muestra el tablero interpretado
+    public void ShowBoard(char[] gameBoard) {
+        for (int i = 0; i < gameBoard.length; i++) {
+
+            if (gameBoard[i] == ' ') {
+                System.out.print("_ ");
+            }
+
+            else {
+                System.out.print(gameBoard[i] + " ");
+            }
+
+        }
+        System.out.println("");
     }
 
     // Introduce una letra y válida si se encuentra otorgando un fallo o
@@ -378,6 +384,7 @@ public class ElAhorcado {
             System.out.println("");
             System.out.println("1. Adivinar letra");
             System.out.println("2. Adivinar palabra");
+            System.out.println("3. Salir");
             int gameOption = teclado.nextInt();
             teclado.nextLine();
 
