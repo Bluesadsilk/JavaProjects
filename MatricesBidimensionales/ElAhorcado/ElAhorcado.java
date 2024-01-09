@@ -25,16 +25,30 @@ public class ElAhorcado {
     // Genera la lista de palabras vacia
     String[] WordList = new String[5];
 
+    // Imprime el mensaje de titulo
+    public void Title() {
+        System.out.println(" _                                             \n" + //
+                "| |                                            \n" + //
+                "| |__   __ _ _ __   __ _ _ __ ___   __ _ _ __  \n" + //
+                "| '_ \\ / _` | '_ \\ / _` | '_ ` _ \\ / _` | '_ \\ \n" + //
+                "| | | | (_| | | | | (_| | | | | | | (_| | | | |\n" + //
+                "|_| |_|\\__,_|_| |_|\\__, |_| |_| |_|\\__,_|_| |_|\n" + //
+                "                    __/ |                      \n" + //
+                "                   |___/                   ");
+    }
+
     // Muestra las opciones del menú principal
     public void ShowOptions() {
+        Title();
+        System.out.println("");
         System.out.println("1. Gestionar palabras");
         System.out.println("2. Jugar");
         System.out.println("3. Salir");
+        System.out.println("");
     }
 
     // Recoge la opción del menu principal elegida
     public int ChooseOptions() {
-        System.out.println();
         System.out.println("Seleccione una opción");
         int option = teclado.nextInt();
         while (option > 3 && option < 1) {
@@ -47,11 +61,13 @@ public class ElAhorcado {
 
     // Muestra las opciones del menu gestionar palabras
     public void ShowManageOptions() {
+        System.out.println("");
         System.out.println("1. Añadir palabra");
         System.out.println("2. Listar palabras");
         System.out.println("3. Buscar palabra");
         System.out.println("4. Eliminar palabra");
         System.out.println("5. Salir");
+        System.out.println("");
     }
 
     // Recoge la opción del menu gestionar palabras escogida
@@ -181,6 +197,7 @@ public class ElAhorcado {
                 default:
                     manageOption = 5;
                     System.out.println("Gestión finalizada");
+                    System.out.println("");
                     break;
             }
         }
@@ -188,13 +205,15 @@ public class ElAhorcado {
 
     // Enseña las opciones del menu de juego
     public void ShowGameOptions() {
+        System.out.println("");
         System.out.println("1. Introducir letra");
         System.out.println("2. Adivinar la palabra");
         System.out.println("3. Salir del juego");
+        System.out.println("");
     }
 
     public void ShowHangman(int failCounter) {
-
+        System.out.println("");
         switch (failCounter) {
             case 1:
                 System.out.println(" ---------------------");
@@ -303,6 +322,7 @@ public class ElAhorcado {
                 System.out.println(" |");
                 break;
         }
+        System.out.println("");
     }
 
     // Escoge una palabra aleatoria
@@ -324,6 +344,7 @@ public class ElAhorcado {
 
     // Muestra el tablero interpretado
     public void ShowBoard(char[] gameBoard) {
+        System.out.println("");
         for (int i = 0; i < gameBoard.length; i++) {
 
             if (gameBoard[i] == ' ') {
@@ -367,24 +388,70 @@ public class ElAhorcado {
         return result;
     }
 
+    // Imprime el mensaje de derrota
+    public void LostGame(String playWord) {
+        System.out.println("");
+        System.out.println("Ha sido derrotado, la palabra era " + playWord);
+        System.out.println("\n" + //
+                "\n" + //
+                " ___                                                      ___   ___   ___  \n" + //
+                "(   )                                                    (   ) (   ) (   ) \n" + //
+                " | |    .--.     .--.       .--.      .--.    ___ .-.     | |   | |   | |  \n" + //
+                " | |   /    \\   /    \\    /  _  \\    /    \\  (   )   \\    | |   | |   | |  \n" + //
+                " | |  |  .-. ; |  .-. ;  . .' `. ;  |  .-. ;  | ' .-. ;   | |   | |   | |  \n" + //
+                " | |  | |  | | | |  | |  | '   | |  |  | | |  |  / (___)  | |   | |   | |  \n" + //
+                " | |  | |  | | | |  | |  _\\_`.(___) |  |/  |  | |         | |   | |   | |  \n" + //
+                " | |  | |  | | | |  | | (   ). '.   |  ' _.'  | |         | |   | |   | |  \n" + //
+                " | |  | '  | | | '  | |  | |  `\\ |  |  .'.-.  | |         |_|   |_|   |_|  \n" + //
+                " | |  '  `-' / '  `-' /  ; '._,' '  '  `-' /  | |         .-.   .-.   .-.  \n" + //
+                "(___)  `.__.'   `.__.'    '.___.'    `.__.'  (___)       (   ) (   ) (   ) \n" + //
+                "                                                          '-'   '-'   '-'  \n" + //
+                "                                                                           \n" + //
+                "\n" + //
+                "");
+        System.out.println("");
+
+    }
+
+    // Imprime el mensaje de victoria
+    public void WonGame(String playWord) {
+        System.out.println("");
+        System.out.println("Ha ganado la partida, la palabra era " + playWord);
+        System.out.println("\n" + //
+                "\n" + //
+                "                            ___                                      \n" + //
+                "            .-.            (   )                                     \n" + //
+                " ___  ___  ( __)   .--.     | |_       .--.    ___ .-.     ___  ___  \n" + //
+                "(   )(   ) (''\")  /    \\   (   __)    /    \\  (   )   \\   (   )(   ) \n" + //
+                " | |  | |   | |  |  .-. ;   | |      |  .-. ;  | ' .-. ;   | |  | |  \n" + //
+                " | |  | |   | |  |  |(___)  | | ___  | |  | |  |  / (___)  | |  | |  \n" + //
+                " | |  | |   | |  |  |       | |(   ) | |  | |  | |         | '  | |  \n" + //
+                " | |  | |   | |  |  | ___   | | | |  | |  | |  | |         '  `-' |  \n" + //
+                " ' '  ; '   | |  |  '(   )  | ' | |  | '  | |  | |          `.__. |  \n" + //
+                "  \\ `' /    | |  '  `-' |   ' `-' ;  '  `-' /  | |          ___ | |  \n" + //
+                "   '_.'    (___)  `.__,'     `.__.    `.__.'  (___)        (   )' |  \n" + //
+                "                                                            ; `-' '  \n" + //
+                "                                                             .__.'   \n" + //
+                "\n" + //
+                "");
+        System.out.println("");
+        System.out.println();
+
+    }
+
+    // Muestra las opciones del menu de juego
+
     // Inicia el juego
     public void PlayGame() {
-        int failCounter = 0;
-        int successCounter = 0;
-        int exitDoor = 0;
+        int failCounter = 0, successCounter = 0, exitDoor = 0;
         boolean wordGuessed = false;
         String playWord = ChooseWord();
         char[] gameBoard = Genboard(playWord);
 
         while (true) {
-
             ShowHangman(failCounter);
-            System.out.println("");
             ShowBoard(gameBoard);
-            System.out.println("");
-            System.out.println("1. Adivinar letra");
-            System.out.println("2. Adivinar palabra");
-            System.out.println("3. Salir");
+            ShowGameOptions();
             int gameOption = teclado.nextInt();
             teclado.nextLine();
 
@@ -417,17 +484,13 @@ public class ElAhorcado {
                     break;
             }
 
-            if (failCounter == playWord.length()) {
-                System.out.println("Ha sido derrotado, la palabra era " + playWord);
+            if (failCounter == 6) {
+                LostGame(playWord);
                 break;
             }
 
             if (successCounter == playWord.length() || wordGuessed == true) {
-                System.out.println("");
-                System.out.println("");
-                System.out.println("Ha ganado la partida, la palabra era " + playWord);
-                System.out.println("");
-                System.out.println("");
+                WonGame(playWord);
                 break;
             }
 
